@@ -38,7 +38,7 @@ If we had more data, it would be interesting to see if users leave any reviews a
 **Answer:**  
 I organized my models by creating separate folders for intermediate models and marts. For the product, I made the `int_product_daily_page_views`, a view used to develop `fact_page_views`, where each row represents page view activity on a given day for an individual product. I can then use the `fact_page_views` to create a query by joining the data with the `int_product_delivered_orders` view by the product_id and the daily date to identify which products have better conversion rates (completed orders / page views). I then created the `user_order_facts` model under the marketing marts folder to gather order information regarding all our users, including those who have not placed an order yet. This will provide readily available information to our stakeholders who need to know about user orders.
 
-<img src="/workspace/course-dbt/fz_dbt_dag_image.png" alt="DBT DAG Image" width="600" />
+<img src="fz_dbt_dag_image.png" alt="DBT DAG Image" width="600" />
 
 
 ---
