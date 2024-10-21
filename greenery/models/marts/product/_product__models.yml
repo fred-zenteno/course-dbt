@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: fact_page_views
+    description: "Daily aggregated page views per product name"
+    columns:
+      - name: product_id
+        tests:
+          - not_null

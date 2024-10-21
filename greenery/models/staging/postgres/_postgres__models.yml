@@ -3,21 +3,59 @@ version: 2
 models:
   - name: stg_postgres__users
     description: "This staging table contains user data from the raw source."
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+      - name: email
+        tests:
+          - unique
+          - not_null
 
   - name: stg_postgres__addresses
     description: "This staging table contains the address data from users."
+    columns:
+      - name: address_id
+        tests:
+          - unique
+          - not_null
 
   - name: stg_postgres__events
     description: "This staging table contains event tracking data from the platform."
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null
 
   - name: stg_postgres__orders
     description: "This staging table contains order data from users."
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
 
   - name: stg_postgres__order_items
     description: "This staging table contains details of the items included in each order."
+    columns:
+      - name: order_id
+        tests:
+          - not_null
 
   - name: stg_postgres__products
     description: "This staging table contains product information available."
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
 
   - name: stg_postgres__promos
     description: "This staging table contains promo code data used in orders."
+    columns:
+      - name: promo_id
+        tests:
+          - unique
+          - not_null

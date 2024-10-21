@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: int_product_daily_page_views
+    description: "Daily aggregated page views per product"
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+  - name: int_product_delivered_orders
+    description: "Daily aggregated delivered orders and quantities per product"
+    columns:
+      - name: product_id
+        tests:
+          - not_null

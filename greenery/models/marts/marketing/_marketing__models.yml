@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: user_order_facts
+    description: "Order data per user in our database"
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
