@@ -28,6 +28,12 @@ models:
         tests:
           - unique
           - not_null
+      - name: event_type
+        description: Event type expected values
+        tests:  
+          - dbt_expectations.expect_column_values_to_be_in_set:
+              column_name: event_type
+              value_set: ['page_view', 'add_to_cart', 'checkout', 'package_shipped']
 
   - name: stg_postgres__orders
     description: "This staging table contains order data from users."

@@ -1,0 +1,19 @@
+version: 2
+
+macros:
+  - name: sum_event_types
+    description: "Adds up occurrences of a specific event type within a given event column."
+    arguments:
+      - name: event_column
+        description: "The column containing event types."
+      - name: event_type
+        description: "The specific event type to count."
+
+
+  - name: count_event_types
+    description: "Generates a count of multiple event types within a given event column, for cleaner SQL code."
+    arguments:
+      - name: table_alias
+        description: "Alias of the table containing the event column."
+      - name: event_column
+        description: "The column containing event types."

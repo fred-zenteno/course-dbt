@@ -7,3 +7,15 @@ models:
       - name: product_id
         tests:
           - not_null
+  - name: fact_product_user_session_events
+    description: "Daily aggregated event per user, session, and product"
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+      - name: user_id
+        tests:
+          - not_null
+      - name: session_id
+        tests:
+          - not_null
