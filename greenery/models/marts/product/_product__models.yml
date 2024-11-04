@@ -19,3 +19,17 @@ models:
       - name: session_id
         tests:
           - not_null
+  - name: dim_products
+    description: "Dimension table of products"
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+  - name: dim_users
+    description: "Dimension table of users"
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique

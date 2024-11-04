@@ -1,0 +1,20 @@
+version: 2
+
+exposures:
+
+  - name: User & Product Funnel Dashboard
+    label: Product Funnel Dashboard
+    type: dashboard
+    maturity: high
+    url: https://app.sigmacomputing.com/corise-dbt/workbook/workbook-2eELfAWtaljIeCKU952lOo?:link_source=share
+    description: >
+      Dashboard to track funnel events of Greenery users and products
+
+    depends_on:
+      - ref('dim_products')
+      - ref('dim_users')
+      - ref('fact_product_user_session_events')
+
+    owner:
+      name: Freddie Zenteno
+      email: freddie.zenteno@outlook.com
